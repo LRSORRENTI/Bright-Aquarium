@@ -1,9 +1,11 @@
-import ArrowIcon from '@/assets/arrow-right.svg'
 
+import Image from 'next/image';
+import ArrowIcon from '@/assets/arrow-right.svg'
+import cogimage from '@/assets/cog.png'
 
 export const Hero = () => {
   return (
-   <section>
+   <section className='pt-8 pb-20 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_67%)]'>
     <div className="container">
       <div>
         <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight">
@@ -24,6 +26,9 @@ export const Hero = () => {
             <ArrowIcon className="h-5 w-5"/>
             </button>
         </div>
+      </div>
+      <div className='mt-20'>
+        <Image src={cogimage} alt='Cog image'/>
       </div>
     </div>
    </section>
