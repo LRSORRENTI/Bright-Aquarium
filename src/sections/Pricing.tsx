@@ -67,7 +67,7 @@ export const Pricing = () => {
         <div className='flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end lg:justify-center '>
           {pricingTiers.map(
             ({title, monthlyPrice, buttonText, popular, inverse, features}) => (
-              <div className={twMerge('p-10 border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full', inverse === true && 'border-black bg-black text-white')} key={pricingTiers.length}>
+              <div className={twMerge('card', inverse === true && 'border-black bg-black text-white')} key={pricingTiers.length}>
               <div className='flex justify-between'>
               <h3 className={twMerge('text-lg font-bold text-black/50', inverse === true && 'text-white/60')}>{title}</h3>
                 {/* only render the below div if popular is 
