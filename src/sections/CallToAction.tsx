@@ -23,7 +23,11 @@ export const CallToAction = () => {
                className="absolute -right-[331px] -top-[19px]"/>
         </div>
         <div className="flex gap-2 mt-10 justify-center ">
-          <button className="btn btn-primary">Get for free</button>
+        <button className="group bg-black px-4 py-2 rounded-lg font-medium inline-flex align-middle justify-center tracking-tight transition-all duration-300">
+          <span className="bg-clip-text text-white transition-all duration-300 bg-gradient-to-r from-pink-400 via-yellow-400 to-blue-400 group-hover:text-transparent group-hover:bg-gradient-to-r">
+          Get for free
+          </span>
+          </button>
           <button className="btn btn-text gap-1">
             <span>Learn more</span>
             <ArrowRight className="h-5 w-5 "/>
