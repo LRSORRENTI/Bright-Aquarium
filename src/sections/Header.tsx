@@ -27,7 +27,11 @@ export const Header = () => {
           <a href="">Customers</a>
           <a href="">Updates</a>
           <a href="">Help</a>
-          <button className='bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex align-middle justify-center tracking-tight '>Get for free</button>
+          <button className="group bg-black px-4 py-2 rounded-lg font-medium inline-flex align-middle justify-center tracking-tight transition-all duration-300">
+          <span className="bg-clip-text text-white transition-all duration-300 bg-gradient-to-r from-pink-400 via-yellow-400 to-blue-400 group-hover:text-transparent group-hover:bg-gradient-to-r">
+          Get for free
+          </span>
+          </button>
         </nav>
       </div>
       </div>

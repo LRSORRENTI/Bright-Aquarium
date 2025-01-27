@@ -36,7 +36,11 @@ export const Hero = () => {
           efforts, and celebrate your successes.
         </p>
         <div className="flex gap-1 items-center mt-[30px]">
-          <button className="btn btn-primary">Get for free</button>
+        <button className="group bg-black px-4 py-2 rounded-lg font-medium inline-flex align-middle justify-center tracking-tight transition-all duration-300">
+          <span className="bg-clip-text text-white transition-all duration-300 bg-gradient-to-t from-pink-400 via-yellow-400 to-blue-400 group-hover:text-transparent group-hover:bg-gradient-to-r">
+          Get for free
+          </span>
+          </button>
           <button className="btn btn-text gap-1">
             <span>Learn more</span>
             <ArrowIcon className="h-5 w-5"/>
