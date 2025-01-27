@@ -1,6 +1,8 @@
-import CheckIcon from '@/assets/check.svg';
-import { twMerge } from 'tailwind-merge'
+'use client'
 
+import CheckIcon from '@/assets/check.svg';
+import { twMerge } from 'tailwind-merge';
+import { motion } from 'framer-motion';
 
 const pricingTiers = [
   {
@@ -74,7 +76,17 @@ export const Pricing = () => {
                 set to true in the above array */}
                 {popular === true && (
                  <div className='inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20'>
-                 <span className='bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF)] text-transparent bg-clip-text font-bold'>Popular</span>
+                 <motion.span className='bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF)] [background-size:200%] text-transparent bg-clip-text font-bold'
+                              animate={{
+                                backgroundPositionX: '100%',
+                              }}
+                              transition={{
+                                duration: 1,
+                                repeat: Infinity,
+                                ease: 'linear',
+                                repeatType: 'loop'
+                              }}
+                 >Popular</motion.span>
                  </div>
               )}
             </div>
@@ -86,7 +98,7 @@ export const Pricing = () => {
                 /month
               </span>
               </div>
-              <button className={twMerge('btn btn-primary w-full mt-[30px]', inverse === true && 'bg-white text-black')}>{buttonText}</button>
+              <button className={twMerge('btn btn-primary w-full mt-[30px] transition duration-300 hover:text-white/85', inverse === true && 'bg-white text-black hover:text-black/70')}>{buttonText}</button>
               <ul className='flex flex-col gap-5 mt-8'>
                 {features.map(feature => (
                   <li className='text-sm flex items-center gap-4' key={feature.length}>
