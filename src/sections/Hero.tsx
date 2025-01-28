@@ -26,7 +26,7 @@ export const Hero = () => {
       <div className='md:flex items-center'>
       <div className='md:w-[478px]'>
   <div className="tag">
-    Dive into Version 2.0
+    Dive into our new exhibits
   </div>
   <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">
     Explore the Depths of Discovery

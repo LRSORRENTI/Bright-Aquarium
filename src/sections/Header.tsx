@@ -45,20 +45,20 @@ export const Header = () => {
                 About
               </a>
               <a href="#" className="hover:text-black transition-all ease-in-out">
-                Features
+                Discover
               </a>
               <a href="#" className="hover:text-black transition-all ease-in-out">
-                Customers
+                Memberships
               </a>
               <a href="#" className="hover:text-black transition-all ease-in-out">
-                Updates
+                Testimonials
               </a>
-              <a href="#" className="hover:text-black transition-all ease-in-out">
+              {/* <a href="#" className="hover:text-black transition-all ease-in-out">
                 Help
-              </a>
+              </a> */}
               <button className="group bg-black px-4 py-2 rounded-lg font-medium inline-flex align-middle justify-center tracking-tight transition-all duration-300">
                 <span className="bg-clip-text text-white transition-all duration-300 bg-gradient-to-r from-pink-400 via-yellow-400 to-blue-400 group-hover:text-transparent group-hover:bg-gradient-to-r">
-                  Get for free
+                  Get tickets
                 </span>
               </button>
             </nav>

@@ -1,8 +1,8 @@
 'use client';
 
 import ArrowRight from '@/assets/arrow-right.svg';
-import starImage from '@/assets/butterflyfish.png';
-import springImage from '@/assets/lionfish.png';
+import butterflyFishImage from '@/assets/butterflyfish.png';
+import lionFishImage from '@/assets/lionfish.png';
 
 import Image from 'next/image';
 
@@ -29,7 +29,7 @@ export const CallToAction = () => {
         exclusive events, and unforgettable experiences.
         </p>
         <motion.img 
-               src={starImage.src} alt='Star image'
+               src={butterflyFishImage.src} alt='Star image'
                width={360}
                className="absolute -left-[330px] md:-left-[400px] -top-[137px]"
                style={{
@@ -37,9 +37,9 @@ export const CallToAction = () => {
                }}
                />
         <motion.img 
-               src={springImage.src} alt='Spring image'
+               src={lionFishImage.src} alt='Spring image'
                width={360}
-               className="absolute -right-[331px] -top-[19px]"
+               className="absolute -right-[391px] -top-[19px]"
                style={{
                 translateY,
                }}
