@@ -68,7 +68,7 @@ export const Header = () => {
 
       {/* Side Navigation */}
       {isMenuOpen && (
-        <div className='relative flex justify-end md:hidden'>
+        <div className=' flex justify-end md:hidden sticky'>
         <motion.div
           initial={{ x: '100%' }}
           animate={{ x: 0 }}
@@ -111,7 +111,7 @@ export const Header = () => {
       {/* Overlay */}
       {isMenuOpen && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-black/50 z-20 md:hidden"
+          className="fixed top-0 left-0 w-full h-full bg-black/50 z-20 hidden"
           onClick={toggleMenu}
         ></div>
       )}
