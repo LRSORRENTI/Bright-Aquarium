@@ -14,6 +14,7 @@ export const LogoTicker = () => {
   return (
     <div className='py-8 md:py-12 bg-white'>
       <div className="container">
+      <h2 className="section-title mb-12">Our Sponsors</h2>
         <div className='flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]'>
         <motion.div className='flex gap-14 flex-none pr-14' 
           animate={{

@@ -1,8 +1,8 @@
 'use client';
 
 import ArrowRight from '@/assets/arrow-right.svg';
-import starImage from '@/assets/star.png';
-import springImage from '@/assets/spring.png';
+import starImage from '@/assets/butterflyfish.png';
+import springImage from '@/assets/lionfish.png';
 
 import Image from 'next/image';
 
@@ -23,10 +23,10 @@ export const CallToAction = () => {
     <section ref={sectionRef} className="bg-gradient-to-b from-white to-[#D2DCFF] py-24 overflow-x-clip">
       <div className="container">
        <div className='section-heading relative'>
-        <h2 className="section-title">Sign up for free today</h2>
-        <p className="section-description mt-5">Celebrate the joy of accomplishment 
-          with an app designed to track your
-          progress and motivate your efforts.
+       <h2 className="section-title">Dive into your next adventure</h2>
+        <p className="section-description mt-5">
+        Unlock a world of marine wonders. Sign up today and explore breathtaking exhibits, 
+        exclusive events, and unforgettable experiences.
         </p>
         <motion.img 
                src={starImage.src} alt='Star image'
@@ -48,7 +48,7 @@ export const CallToAction = () => {
         <div className="flex gap-2 mt-10 justify-center ">
         <button className="group bg-black px-4 py-2 rounded-lg font-medium inline-flex align-middle justify-center tracking-tight transition-all duration-300">
           <span className="bg-clip-text text-white transition-all duration-300 bg-gradient-to-r from-pink-400 via-yellow-400 to-blue-400 group-hover:text-transparent group-hover:bg-gradient-to-r">
-          Get for free
+          Get tickets
           </span>
           </button>
           <button className="btn btn-text gap-1">

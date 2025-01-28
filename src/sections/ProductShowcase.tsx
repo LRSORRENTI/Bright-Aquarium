@@ -1,7 +1,8 @@
 'use client'
+import bluefishImage from '@/assets/bluefish.png'
 
-import productImage from '@/assets/product-image.png'
-import pyramidImage from '@/assets/pyramid.png'
+import mainDisplay from '@/assets/main-display.jpg'
+import seahorseImage from '@/assets/seahorse.png'
 import tubeImage from '@/assets/tube.png'
 import Image from 'next/image';
 
@@ -21,24 +22,23 @@ export const ProductShowcase = () => {
       <div className="container">
         <div className='section-heading'>
         <div className='flex justify-center'>
-        <div className='tag'>Boost your productivity</div>
+        <div className='tag'>Discover the ocean's giants</div>
         </div>
-        <h2 className='section-title mt-5'>A more effective way to track progress</h2>
-        <p className='section-description mt-5'>Effortlessly turn your ideas into a fully 
-          functional SaaS website in just minutes with 
-          this template.
+        <h2 className='section-title mt-5'>A breathtaking way to connect with marine life</h2>
+        <p className='section-description mt-5'>Step into an underwater world and marvel at majestic whale sharks, vibrant fish, 
+        and unforgettable moments waiting to be captured.
         </p>
         </div>
         <div className='relative'>
-        <Image src={productImage} 
+        <Image src={mainDisplay} 
                alt='Product Image' 
-               className='mt-10'
+               className='mt-10 rounded-3xl'
           /> 
           <motion.img 
                   style={{
                     translateY,
                   }}
-                  src={pyramidImage.src}
+                  src={bluefishImage.src}
                   alt="pyramid Image"
                   height={262}
                   width={262}
@@ -48,7 +48,7 @@ export const ProductShowcase = () => {
                 style={{
                   translateY,
                 }}
-                 src={tubeImage.src}
+                 src={seahorseImage.src}
                  alt='Tube Image'
                  height={248}
                  width={248}
