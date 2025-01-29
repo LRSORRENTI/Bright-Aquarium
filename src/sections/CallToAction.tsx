@@ -29,6 +29,12 @@ export const CallToAction = () => {
 
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150])
 
+  const handleClickMobileNavItem = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const target = document.querySelector(new URL(e.currentTarget.href).hash);
+    target?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section ref={sectionRef} className="bg-gradient-to-b from-white to-[#D2DCFF] py-24 overflow-x-clip">
       <div className="container">
@@ -79,10 +85,13 @@ export const CallToAction = () => {
                 </div>
               </AlertDialogContent>
               </AlertDialog>
+            
+              <a href="#hero" className="inline-block" onClick={handleClickMobileNavItem}>
               <button className="btn btn-text gap-1">
-            <span>Learn more</span>
-            <ArrowRight className="h-5 w-5 "/>
-          </button>
+              <span>Learn more</span>
+              <ArrowRight className="h-5 w-5" />
+              </button>
+              </a>
         </div>
       </div>
     </section>

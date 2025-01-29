@@ -68,10 +68,10 @@ export const Hero = () => {
                 </div>
               </AlertDialogContent>
               </AlertDialog>
-    <button className="btn btn-text gap-1">
+    {/* <button className="btn btn-text gap-1">
       <span>Learn More</span>
       <ArrowIcon className="h-5 w-5" />
-    </button>
+    </button> */}
   </div>
 </div>
 
