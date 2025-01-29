@@ -8,6 +8,9 @@ import ArrowRight from '@/assets/arrow-right.svg';
 import Logo from '@/assets/logosaas.png';
 import MenuIcon from '@/assets/menu.svg';
 import CloseIcon from '@/assets/close.svg';
+
+import { handleClickMobileNavItem } from '@/hooks/handleClickMobileNavItem';
+
 import {
   AlertDialog,
   AlertDialogTrigger,
@@ -24,13 +27,6 @@ export const Header = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  const handleClickMobileNavItem = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const target = document.querySelector(new URL(e.currentTarget.href).hash);
-    target?.scrollIntoView({ behavior: "smooth" });
-  };
-
 
   return (
     <header className="sticky top-0 backdrop-blur-sm z-20">

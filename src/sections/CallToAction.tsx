@@ -4,6 +4,8 @@ import ArrowRight from '@/assets/arrow-right.svg';
 import butterflyFishImage from '@/assets/butterflyfish.png';
 import lionFishImage from '@/assets/lionfish.png';
 
+import { handleClickMobileNavItem } from '@/hooks/handleClickMobileNavItem';
+
 import {
   AlertDialog,
   AlertDialogTrigger,
@@ -28,12 +30,6 @@ export const CallToAction = () => {
   })
 
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150])
-
-  const handleClickMobileNavItem = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const target = document.querySelector(new URL(e.currentTarget.href).hash);
-    target?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section ref={sectionRef} className="bg-gradient-to-b from-white to-[#D2DCFF] py-24 overflow-x-clip">

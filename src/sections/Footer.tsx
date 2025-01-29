@@ -9,16 +9,11 @@ import SocialLinkedInIcon from '@/assets/social-linkedin.svg';
 import SocialPinterestIcon from '@/assets/social-pin.svg';
 import SocialYouTubeIcon from '@/assets/social-youtube.svg';
 
+import { handleClickMobileNavItem } from '@/hooks/handleClickMobileNavItem';
+
 export const Footer = () => {
 
   let date = (new Date().getFullYear())
-
-  const handleClickMobileNavItem = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const target = document.querySelector(new URL(e.currentTarget.href).hash);
-    target?.scrollIntoView({ behavior: "smooth" });
-  };
-
 
   return (
     <footer className='bg-black text-[#BCBCBC] text-sm py-10 text-center'>
