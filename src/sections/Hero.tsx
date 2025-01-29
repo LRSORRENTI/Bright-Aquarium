@@ -2,10 +2,17 @@
 
 import Image from 'next/image'
 import ArrowIcon from '@/assets/arrow-right.svg'
-import cogimage from '@/assets/cog.png'
-import cylinderImage from '@/assets/cylinder.png'
-import noodleImage from '@/assets/noodle.png'
 import cuttleImage from '@/assets/cuttle.png'
+
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogCancel, 
+} from "@/components/alert-dialog";
 
 import { useRef } from 'react';
 
@@ -35,11 +42,32 @@ export const Hero = () => {
     Immerse yourself in the beauty of the ocean with an aquarium designed to inspire curiosity, educate minds, and celebrate the wonders of marine life.
   </p>
   <div className="flex gap-1 items-center mt-[30px]">
-    <button className="group bg-black px-4 py-2 rounded-lg font-medium inline-flex align-middle justify-center tracking-tight transition-all duration-300">
-      <span className="bg-clip-text text-white transition-all duration-300 bg-gradient-to-t from-pink-400 via-yellow-400 to-blue-400 group-hover:text-transparent group-hover:bg-gradient-to-r">
-        Get Tickets
-      </span>
-    </button>
+  <AlertDialog>
+              <AlertDialogTrigger asChild>
+              <button className="group bg-black px-4 py-2 rounded-lg font-medium inline-flex align-middle justify-center tracking-tight transition-all duration-300">
+                <span className="bg-clip-text text-white transition-all duration-300 bg-gradient-to-r from-pink-400 via-yellow-400 to-blue-400 group-hover:text-transparent group-hover:bg-gradient-to-r">
+                  Get tickets
+                </span>
+              </button>
+               </AlertDialogTrigger>
+  
+
+
+              {/* Dialog Content */}
+              <AlertDialogContent className="bg-white p-6 rounded-lg shadow-xl z-50">
+                <AlertDialogHeader>
+                  <AlertDialogTitle className="text-lg font-semibold">Notice</AlertDialogTitle>
+                  <AlertDialogDescription className="text-gray-600">
+                    Online ticket sales are currently unavailable. Please check back later or call our frontdesk.
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <div className="flex justify-end mt-4">
+                  <AlertDialogCancel asChild>
+                    <button className="bg-gray-200 px-4 py-2 rounded-lg text-black w-full sm:w-auto">Close</button>
+                  </AlertDialogCancel>
+                </div>
+              </AlertDialogContent>
+              </AlertDialog>
     <button className="btn btn-text gap-1">
       <span>Learn More</span>
       <ArrowIcon className="h-5 w-5" />

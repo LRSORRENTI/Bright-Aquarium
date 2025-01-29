@@ -8,6 +8,15 @@ import ArrowRight from '@/assets/arrow-right.svg';
 import Logo from '@/assets/logosaas.png';
 import MenuIcon from '@/assets/menu.svg';
 import CloseIcon from '@/assets/close.svg';
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogCancel, 
+} from "@/components/alert-dialog";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,11 +73,33 @@ export const Header = () => {
               onClick={handleClickMobileNavItem}>
                 Testimonials
               </a>
+              <AlertDialog>
+              <AlertDialogTrigger asChild>
               <button className="group bg-black px-4 py-2 rounded-lg font-medium inline-flex align-middle justify-center tracking-tight transition-all duration-300">
                 <span className="bg-clip-text text-white transition-all duration-300 bg-gradient-to-r from-pink-400 via-yellow-400 to-blue-400 group-hover:text-transparent group-hover:bg-gradient-to-r">
                   Get tickets
                 </span>
               </button>
+               </AlertDialogTrigger>
+  
+
+
+              {/* Dialog Content */}
+              <AlertDialogContent className="bg-white p-6 rounded-lg shadow-xl z-50">
+                <AlertDialogHeader>
+                  <AlertDialogTitle className="text-lg font-semibold">Notice</AlertDialogTitle>
+                  <AlertDialogDescription className="text-gray-600">
+                    Online ticket sales are currently unavailable. Please check back later or call our frontdesk.
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <div className="flex justify-end mt-4">
+                  <AlertDialogCancel asChild>
+                    <button className="bg-gray-200 px-4 py-2 rounded-lg text-black w-full sm:w-auto">Close</button>
+                  </AlertDialogCancel>
+                </div>
+              </AlertDialogContent>
+              </AlertDialog>
+
             </nav>
           </div>
         </div>
@@ -120,9 +151,32 @@ export const Header = () => {
                 onClick={handleClickMobileNavItem}>
                   Testimonials
                 </a>
-                <button className="bg-black px-4 py-2 rounded-lg font-medium text-white hover:bg-gray-800 transition-all duration-300">
-                  Get for free
-                </button>
+                <AlertDialog>
+              <AlertDialogTrigger asChild>
+              <button className="group bg-black px-4 py-2 rounded-lg font-medium inline-flex align-middle justify-center tracking-tight transition-all duration-300">
+                <span className="bg-clip-text text-white transition-all duration-300 bg-gradient-to-r from-pink-400 via-yellow-400 to-blue-400 group-hover:text-transparent group-hover:bg-gradient-to-r">
+                  Get tickets
+                </span>
+              </button>
+               </AlertDialogTrigger>
+  
+
+
+              {/* Dialog Content */}
+              <AlertDialogContent className="bg-white p-6 rounded-lg shadow-xl z-50">
+                <AlertDialogHeader>
+                  <AlertDialogTitle className="text-lg font-semibold">Notice</AlertDialogTitle>
+                  <AlertDialogDescription className="text-gray-600">
+                    Online ticket sales are currently unavailable. Please check back later or call our frontdesk.
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <div className="flex justify-end mt-4">
+                  <AlertDialogCancel asChild>
+                    <button className="bg-gray-200 px-4 py-2 rounded-lg text-black w-full sm:w-auto">Close</button>
+                  </AlertDialogCancel>
+                </div>
+              </AlertDialogContent>
+              </AlertDialog>
               </nav>
             </motion.div>
           </>
