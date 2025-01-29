@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image';
 
 import logo from '@/assets/logosaas.png';
@@ -11,6 +13,13 @@ export const Footer = () => {
 
   let date = (new Date().getFullYear())
 
+  const handleClickMobileNavItem = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const target = document.querySelector(new URL(e.currentTarget.href).hash);
+    target?.scrollIntoView({ behavior: "smooth" });
+  };
+
+
   return (
     <footer className='bg-black text-[#BCBCBC] text-sm py-10 text-center'>
       <div className="container">
@@ -18,10 +27,10 @@ export const Footer = () => {
           <Image src={logo} height={40} alt='saas logo' className='relative'/>
         </div>
       <nav className='flex flex-col md:flex-row md:justify-center gap-6 mt-6'>
-        <a href="#hero">About</a>
-        <a href="#discover">Discover</a>
-        <a href="#memberships">Memberships</a>
-        <a href="#testimonials">Testimonials</a>
+        <a href="#hero" onClick={handleClickMobileNavItem}>About</a>
+        <a href="#discover" onClick={handleClickMobileNavItem}>Discover</a>
+        <a href="#memberships" onClick={handleClickMobileNavItem} >Memberships</a>
+        <a href="#testimonials" onClick={handleClickMobileNavItem}>Testimonials</a>
         {/* <a href="">Help</a>
         <a href="">Careers</a> */}
       </nav>

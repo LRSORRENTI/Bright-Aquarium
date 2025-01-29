@@ -16,6 +16,13 @@ export const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleClickMobileNavItem = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const target = document.querySelector(new URL(e.currentTarget.href).hash);
+    target?.scrollIntoView({ behavior: "smooth" });
+  };
+
+
   return (
     <header className="sticky top-0 backdrop-blur-sm z-20">
       {/* Top Banner */}
@@ -41,16 +48,20 @@ export const Header = () => {
             />
             {/* Desktop Navigation */}
             <nav className="hidden md:flex gap-6 text-black/60 items-center">
-              <a href="#hero" className="hover:text-black transition-all ease-in-out">
+              <a href="#hero" className="hover:text-black transition-all ease-in-out"
+              onClick={handleClickMobileNavItem}>
                 About
               </a>
-              <a href="#discover" className="hover:text-black transition-all ease-in-out">
+              <a href="#discover" className="hover:text-black transition-all ease-in-out"
+              onClick={handleClickMobileNavItem}>
                 Discover
               </a>
-              <a href="#memberships" className="hover:text-black transition-all ease-in-out">
+              <a href="#memberships" className="hover:text-black transition-all ease-in-out"
+              onClick={handleClickMobileNavItem}>
                 Memberships
               </a>
-              <a href="#testimonials" className="hover:text-black transition-all ease-in-out">
+              <a href="#testimonials" className="hover:text-black transition-all ease-in-out"
+              onClick={handleClickMobileNavItem}>
                 Testimonials
               </a>
               <button className="group bg-black px-4 py-2 rounded-lg font-medium inline-flex align-middle justify-center tracking-tight transition-all duration-300">
@@ -93,16 +104,20 @@ export const Header = () => {
               </div>
               {/* Menu Links */}
               <nav className="flex flex-col gap-6 text-black/80 text-lg p-6">
-                <a href="#hero" className="hover:text-black transition-all ease-in-out">
+                <a href="#hero" className="hover:text-black transition-all ease-in-out"
+                onClick={handleClickMobileNavItem}>
                   About
                 </a>
-                <a href="#discover" className="hover:text-black transition-all ease-in-out">
+                <a href="#discover" className="hover:text-black transition-all ease-in-out"
+                onClick={handleClickMobileNavItem}>
                   Discover
                 </a>
-                <a href="#memberships" className="hover:text-black transition-all ease-in-out">
+                <a href="#memberships" className="hover:text-black transition-all ease-in-out"
+                onClick={handleClickMobileNavItem}>
                   Memberships
                 </a>
-                <a href="#testimonials" className="hover:text-black transition-all ease-in-out">
+                <a href="#testimonials" className="hover:text-black transition-all ease-in-out"
+                onClick={handleClickMobileNavItem}>
                   Testimonials
                 </a>
                 <button className="bg-black px-4 py-2 rounded-lg font-medium text-white hover:bg-gray-800 transition-all duration-300">
