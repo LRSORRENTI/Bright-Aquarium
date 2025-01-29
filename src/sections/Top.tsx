@@ -1,4 +1,3 @@
-import TopImage from '@/assets/top.png';
 
 export const Top = () => {
     return (
@@ -10,7 +9,7 @@ export const Top = () => {
                 bg-center 
                 bg-cover 
                 bg-no-repeat
-                md:h-[100vh]
+                lg:h-[100vh]
                 sm:h-[50vw]
                 sm:w-auto
                 bg-[url('../assets/top.png')]"
