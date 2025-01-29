@@ -53,23 +53,27 @@ export const Header = () => {
               onClick={toggleMenu}
             />
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex gap-6 text-black/60 items-center">
-              <a href="#hero" className="hover:text-black transition-all ease-in-out"
-              onClick={handleClickMobileNavItem}>
-                About
-              </a>
-              <a href="#discover" className="hover:text-black transition-all ease-in-out"
-              onClick={handleClickMobileNavItem}>
-                Discover
-              </a>
-              <a href="#memberships" className="hover:text-black transition-all ease-in-out"
-              onClick={handleClickMobileNavItem}>
-                Memberships
-              </a>
-              <a href="#testimonials" className="hover:text-black transition-all ease-in-out"
-              onClick={handleClickMobileNavItem}>
-                Testimonials
-              </a>
+            <nav className="hidden md:flex gap-6 text-black/80 items-center">
+  <a href="#hero" 
+     className="relative hover:text-black transition-all ease-in-out after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-black after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100"
+     onClick={handleClickMobileNavItem}>
+    About
+  </a>
+  <a href="#discover" 
+     className="relative hover:text-black transition-all ease-in-out after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-black after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100"
+     onClick={handleClickMobileNavItem}>
+    Discover
+  </a>
+  <a href="#memberships" 
+     className="relative hover:text-black transition-all ease-in-out after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-black after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100"
+     onClick={handleClickMobileNavItem}>
+    Memberships
+  </a>
+  <a href="#testimonials" 
+     className="relative hover:text-black transition-all ease-in-out after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-black after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100"
+     onClick={handleClickMobileNavItem}>
+    Testimonials
+  </a>
               <AlertDialog>
               <AlertDialogTrigger asChild>
               <button className="group bg-black px-4 py-2 rounded-lg font-medium inline-flex align-middle justify-center tracking-tight transition-all duration-300">
