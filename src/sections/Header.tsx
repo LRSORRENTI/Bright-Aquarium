@@ -53,9 +53,6 @@ export const Header = () => {
               <a href="#" className="hover:text-black transition-all ease-in-out">
                 Testimonials
               </a>
-              {/* <a href="#" className="hover:text-black transition-all ease-in-out">
-                Help
-              </a> */}
               <button className="group bg-black px-4 py-2 rounded-lg font-medium inline-flex align-middle justify-center tracking-tight transition-all duration-300">
                 <span className="bg-clip-text text-white transition-all duration-300 bg-gradient-to-r from-pink-400 via-yellow-400 to-blue-400 group-hover:text-transparent group-hover:bg-gradient-to-r">
                   Get tickets
