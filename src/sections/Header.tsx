@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 
 import ArrowRight from '@/assets/arrow-right.svg';
-import Logo from '@/assets/logosaas.png';
+import Logo from '@/assets/logo.png';
 import MenuIcon from '@/assets/menu.svg';
 import CloseIcon from '@/assets/close.svg';
 
@@ -46,7 +46,7 @@ export const Header = () => {
       <div className="py-5">
         <div className="container">
           <div className="flex items-center justify-between">
-            <Image src={Logo} alt="Saas Logo" height={40} width={40} />
+            <Image src={Logo} alt="Saas Logo" height={40} width={40} className='rounded-lg'/>
             {/* Hamburger Menu */}
             <MenuIcon
               className="h-8 w-8 md:hidden cursor-pointer"

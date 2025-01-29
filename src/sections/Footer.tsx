@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-import logo from '@/assets/logosaas.png';
+import logo from '@/assets/logo.png';
 import SocialXIcon from '@/assets/social-x.svg';
 import SocialInstaIcon from '@/assets/social-insta.svg';
 import SocialLinkedInIcon from '@/assets/social-linkedin.svg';

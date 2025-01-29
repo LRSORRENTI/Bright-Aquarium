@@ -7,7 +7,7 @@ const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Bright Aquarium",
-  description: "Software as a service landing page",
+  description: "Bright Aquarium landing page",
 };
 
 export default function RootLayout({
