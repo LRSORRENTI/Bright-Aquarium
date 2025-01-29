@@ -119,8 +119,8 @@ const TestimonialsColumn = (props: { className?: string; testimonials: typeof te
 
 export const Testimonials = () => {
   return (
-    <section className="bg-white">
-      <div className="container">
+    <section className="bg-white" id="testimonials">
+      <div className="container" >
         <div className="section-heading">
         <div className="flex justify-center">
         <div className="tag">Testimonials</div>

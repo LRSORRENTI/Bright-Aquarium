@@ -41,16 +41,16 @@ export const Header = () => {
             />
             {/* Desktop Navigation */}
             <nav className="hidden md:flex gap-6 text-black/60 items-center">
-              <a href="#" className="hover:text-black transition-all ease-in-out">
+              <a href="#hero" className="hover:text-black transition-all ease-in-out">
                 About
               </a>
-              <a href="#" className="hover:text-black transition-all ease-in-out">
+              <a href="#discover" className="hover:text-black transition-all ease-in-out">
                 Discover
               </a>
-              <a href="#" className="hover:text-black transition-all ease-in-out">
+              <a href="#memberships" className="hover:text-black transition-all ease-in-out">
                 Memberships
               </a>
-              <a href="#" className="hover:text-black transition-all ease-in-out">
+              <a href="#testimonials" className="hover:text-black transition-all ease-in-out">
                 Testimonials
               </a>
               <button className="group bg-black px-4 py-2 rounded-lg font-medium inline-flex align-middle justify-center tracking-tight transition-all duration-300">
@@ -93,16 +93,16 @@ export const Header = () => {
               </div>
               {/* Menu Links */}
               <nav className="flex flex-col gap-6 text-black/80 text-lg p-6">
-                <a href="#" className="hover:text-black transition-all ease-in-out">
+                <a href="#hero" className="hover:text-black transition-all ease-in-out">
                   About
                 </a>
-                <a href="#" className="hover:text-black transition-all ease-in-out">
+                <a href="#discover" className="hover:text-black transition-all ease-in-out">
                   Discover
                 </a>
-                <a href="#" className="hover:text-black transition-all ease-in-out">
+                <a href="#memberships" className="hover:text-black transition-all ease-in-out">
                   Memberships
                 </a>
-                <a href="#" className="hover:text-black transition-all ease-in-out">
+                <a href="#testimonials" className="hover:text-black transition-all ease-in-out">
                   Testimonials
                 </a>
                 <button className="bg-black px-4 py-2 rounded-lg font-medium text-white hover:bg-gray-800 transition-all duration-300">
