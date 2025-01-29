@@ -4,6 +4,16 @@ import CheckIcon from '@/assets/check.svg';
 import { twMerge } from 'tailwind-merge';
 import { motion } from 'framer-motion';
 
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogCancel, 
+} from "@/components/alert-dialog";
+
 const pricingTiers = [
   {
     title: "Day Pass",
@@ -103,14 +113,39 @@ export const Pricing = () => {
                     ${monthlyPrice}
                   </span>
                 </div>
-                <button
-                  className={twMerge(
-                    'btn btn-primary w-full mt-[30px] transition duration-300 hover:text-white/85',
-                    inverse === true && 'bg-white text-black hover:text-black/70'
-                  )}
-                >
-                  {buttonText}
-                </button>
+
+                {/* AlertDialog for the button */}
+                <AlertDialog>
+                  <AlertDialogTrigger asChild>
+                    <button
+                      className={twMerge(
+                        'btn btn-primary w-full mt-[30px] transition duration-300 hover:text-white/85',
+                        inverse === true && 'bg-white text-black hover:text-black/70'
+                      )}
+                    >
+                      {buttonText}
+                    </button>
+                  </AlertDialogTrigger>
+
+
+                  {/* Dialog Content */}
+                  <AlertDialogContent className="bg-white p-6 rounded-lg shadow-xl z-50">
+                    <AlertDialogHeader>
+                      <AlertDialogTitle className="text-lg font-semibold">Notice</AlertDialogTitle>
+                      <AlertDialogDescription className="text-gray-600">
+                        Online purchases for {title} are currently unavailable. Please visit our ticket booth or call for more details.
+                      </AlertDialogDescription>
+                    </AlertDialogHeader>
+                    <div className="flex justify-end mt-4">
+                      <AlertDialogCancel asChild>
+                        <button className="bg-gray-200 px-4 py-2 rounded-lg text-black w-full sm:w-auto">
+                          Close
+                        </button>
+                      </AlertDialogCancel>
+                    </div>
+                  </AlertDialogContent>
+                </AlertDialog>
+
                 <ul className="flex flex-col gap-5 mt-8">
                   {features.map((feature) => (
                     <li
