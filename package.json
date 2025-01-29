@@ -1,5 +1,5 @@
 {
-  "name": "SAAS-Page",
+  "name": "Aquarium-Page",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,7 +13,8 @@
     "framer-motion": "^11.2.14",
     "next": "14.2.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "@radix-ui/react-alert-dialog": "^1.1.4"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

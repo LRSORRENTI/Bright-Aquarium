@@ -1,8 +1,20 @@
 'use client';
 
 import ArrowRight from '@/assets/arrow-right.svg';
-import starImage from '@/assets/star.png';
-import springImage from '@/assets/spring.png';
+import butterflyFishImage from '@/assets/butterflyfish.png';
+import lionFishImage from '@/assets/lionfish.png';
+
+import { handleClickMobileNavItem } from '@/hooks/handleClickMobileNavItem';
+
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogCancel, 
+} from "@/components/alert-dialog";
 
 import Image from 'next/image';
 
@@ -23,13 +35,13 @@ export const CallToAction = () => {
     <section ref={sectionRef} className="bg-gradient-to-b from-white to-[#D2DCFF] py-24 overflow-x-clip">
       <div className="container">
        <div className='section-heading relative'>
-        <h2 className="section-title">Sign up for free today</h2>
-        <p className="section-description mt-5">Celebrate the joy of accomplishment 
-          with an app designed to track your
-          progress and motivate your efforts.
+       <h2 className="section-title">Dive into your next adventure</h2>
+        <p className="section-description mt-5">
+        Unlock a world of marine wonders. Sign up today and explore breathtaking exhibits, 
+        exclusive events, and unforgettable experiences.
         </p>
         <motion.img 
-               src={starImage.src} alt='Star image'
+               src={butterflyFishImage.src} alt='Star image'
                width={360}
                className="absolute -left-[330px] md:-left-[400px] -top-[137px]"
                style={{
@@ -37,24 +49,45 @@ export const CallToAction = () => {
                }}
                />
         <motion.img 
-               src={springImage.src} alt='Spring image'
+               src={lionFishImage.src} alt='Spring image'
                width={360}
-               className="absolute -right-[331px] -top-[19px]"
+               className="absolute -right-[391px] -top-[19px]"
                style={{
                 translateY,
                }}
                />
         </div>
-        <div className="flex gap-2 mt-10 justify-center ">
-        <button className="group bg-black px-4 py-2 rounded-lg font-medium inline-flex align-middle justify-center tracking-tight transition-all duration-300">
-          <span className="bg-clip-text text-white transition-all duration-300 bg-gradient-to-r from-pink-400 via-yellow-400 to-blue-400 group-hover:text-transparent group-hover:bg-gradient-to-r">
-          Get for free
-          </span>
-          </button>
-          <button className="btn btn-text gap-1">
-            <span>Learn more</span>
-            <ArrowRight className="h-5 w-5 "/>
-          </button>
+        <div className="flex gap-2 mt-10 justify-center ">      
+          <AlertDialog>
+              <AlertDialogTrigger asChild>
+              <button className="group bg-black px-4 py-2 rounded-lg font-medium inline-flex align-middle justify-center tracking-tight transition-all duration-300">
+                <span className="bg-clip-text text-white transition-all duration-300 bg-gradient-to-r from-pink-400 via-yellow-400 to-blue-400 group-hover:text-transparent group-hover:bg-gradient-to-r">
+                  Get tickets
+                </span>
+              </button>
+               </AlertDialogTrigger>
+              {/* Dialog Content */}
+              <AlertDialogContent className="bg-white p-6 rounded-lg shadow-xl z-50">
+                <AlertDialogHeader>
+                  <AlertDialogTitle className="text-lg font-semibold">Notice</AlertDialogTitle>
+                  <AlertDialogDescription className="text-gray-600">
+                    Online ticket sales are currently unavailable. Please check back later or call our frontdesk.
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <div className="flex justify-end mt-4">
+                  <AlertDialogCancel asChild>
+                    <button className="bg-gray-200 px-4 py-2 rounded-lg text-black w-full sm:w-auto">Close</button>
+                  </AlertDialogCancel>
+                </div>
+              </AlertDialogContent>
+              </AlertDialog>
+            
+              <a href="#hero" className="inline-block" onClick={handleClickMobileNavItem}>
+              <button className="btn btn-text gap-1">
+              <span>Learn more</span>
+              <ArrowRight className="h-5 w-5" />
+              </button>
+              </a>
         </div>
       </div>
     </section>
