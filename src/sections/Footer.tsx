@@ -21,14 +21,21 @@ export const Footer = () => {
         <div className='inline-flex relative before:content-[""] before:w-full before:top-2 before:bottom-0 before:blur before:bg-[linear-gradient(to_right,#F87BFF,#FB92CF,#FFDD9B,#C2F0E1,#2FD8FE)] before:absolute'>
           <Image src={logo} height={40} alt='saas logo' className='relative'/>
         </div>
-      <nav className='flex flex-col md:flex-row md:justify-center gap-6 mt-6'>
-        <a href="#hero" onClick={handleClickMobileNavItem}>About</a>
-        <a href="#discover" onClick={handleClickMobileNavItem}>Discover</a>
-        <a href="#memberships" onClick={handleClickMobileNavItem} >Memberships</a>
-        <a href="#testimonials" onClick={handleClickMobileNavItem}>Testimonials</a>
-        {/* <a href="">Help</a>
-        <a href="">Careers</a> */}
-      </nav>
+        <nav className="flex flex-col md:flex-row md:justify-center gap-6 mt-6">
+          <a href="#hero" onClick={handleClickMobileNavItem} className="text-gray-300 transition-colors duration-300 hover:text-white">
+            About
+          </a>
+          <a href="#discover" onClick={handleClickMobileNavItem} className="text-gray-300 transition-colors duration-300 hover:text-white">
+            Discover
+          </a>
+          <a href="#memberships" onClick={handleClickMobileNavItem} className="text-gray-300 transition-colors duration-300 hover:text-white">
+            Memberships
+          </a>
+          <a href="#testimonials" onClick={handleClickMobileNavItem} className="text-gray-300 transition-colors duration-300 hover:text-white">
+            Testimonials
+          </a>
+        </nav>
+
       <div className='flex justify-center gap-6 mt-6'>
         <SocialXIcon/>
         <SocialInstaIcon/>
