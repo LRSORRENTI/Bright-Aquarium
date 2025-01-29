@@ -36,7 +36,7 @@ export const Header = () => {
             <Image src={Logo} alt="Saas Logo" height={40} width={40} />
             {/* Hamburger Menu */}
             <MenuIcon
-              className="h-5 w-5 md:hidden cursor-pointer"
+              className="h-8 w-8 md:hidden cursor-pointer"
               onClick={toggleMenu}
             />
             {/* Desktop Navigation */}
@@ -97,16 +97,13 @@ export const Header = () => {
                   About
                 </a>
                 <a href="#" className="hover:text-black transition-all ease-in-out">
-                  Features
+                  Discover
                 </a>
                 <a href="#" className="hover:text-black transition-all ease-in-out">
-                  Customers
+                  Memberships
                 </a>
                 <a href="#" className="hover:text-black transition-all ease-in-out">
-                  Updates
-                </a>
-                <a href="#" className="hover:text-black transition-all ease-in-out">
-                  Help
+                  Testimonials
                 </a>
                 <button className="bg-black px-4 py-2 rounded-lg font-medium text-white hover:bg-gray-800 transition-all duration-300">
                   Get for free
