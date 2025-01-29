@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 
 import ArrowRight from '@/assets/arrow-right.svg';
@@ -63,55 +63,59 @@ export const Header = () => {
         </div>
       </div>
 
-      {/* Side Navigation */}
-      {isMenuOpen && (
-        <div className=' flex justify-end md:hidden sticky'>
-        <motion.div
-          initial={{ x: '100%' }}
-          animate={{ x: 0 }}
-          exit={{ x: '100%' }}
-          transition={{ type: 'spring', stiffness: 80, damping: 20 }}
-          className=" -top-20 w-[75%] sm:w-[50%] h-full bg-white shadow-lg z-30 relative"
-        >
-          {/* Close Button */}
-          <div className="flex justify-end p-4">
-            <CloseIcon
-              className="h-6 w-6 text-black cursor-pointer"
+      {/* Side Navigation and Overlay */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <>
+            {/* Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-30"
               onClick={toggleMenu}
             />
-          </div>
-          {/* Menu Links */}
-          <nav className="flex flex-col gap-6 text-black/80 text-lg p-6">
-            <a href="#" className="hover:text-black transition-all ease-in-out">
-              About
-            </a>
-            <a href="#" className="hover:text-black transition-all ease-in-out">
-              Features
-            </a>
-            <a href="#" className="hover:text-black transition-all ease-in-out">
-              Customers
-            </a>
-            <a href="#" className="hover:text-black transition-all ease-in-out">
-              Updates
-            </a>
-            <a href="#" className="hover:text-black transition-all ease-in-out">
-              Help
-            </a>
-            <button className="bg-black px-4 py-2 rounded-lg font-medium text-white hover:bg-gray-800 transition-all duration-300">
-              Get for free
-            </button>
-          </nav>
-        </motion.div>
-        </div>
-      )}
-
-      {/* Overlay */}
-      {isMenuOpen && (
-        <div
-          className="fixed top-0 left-0 w-full h-full bg-black/50 z-20 hidden"
-          onClick={toggleMenu}
-        ></div>
-      )}
+            
+            {/* Side Navigation */}
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', stiffness: 80, damping: 20 }}
+              className="fixed top-0 right-0 w-[75%] sm:w-[50%]  bg-white shadow-lg z-40"
+            >
+              {/* Close Button */}
+              <div className="flex justify-end p-4">
+                <CloseIcon
+                  className="h-6 w-6 text-black cursor-pointer"
+                  onClick={toggleMenu}
+                />
+              </div>
+              {/* Menu Links */}
+              <nav className="flex flex-col gap-6 text-black/80 text-lg p-6">
+                <a href="#" className="hover:text-black transition-all ease-in-out">
+                  About
+                </a>
+                <a href="#" className="hover:text-black transition-all ease-in-out">
+                  Features
+                </a>
+                <a href="#" className="hover:text-black transition-all ease-in-out">
+                  Customers
+                </a>
+                <a href="#" className="hover:text-black transition-all ease-in-out">
+                  Updates
+                </a>
+                <a href="#" className="hover:text-black transition-all ease-in-out">
+                  Help
+                </a>
+                <button className="bg-black px-4 py-2 rounded-lg font-medium text-white hover:bg-gray-800 transition-all duration-300">
+                  Get for free
+                </button>
+              </nav>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
