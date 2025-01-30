@@ -16,8 +16,6 @@ import {
   AlertDialogCancel, 
 } from "@/components/alert-dialog";
 
-import Image from 'next/image';
-
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
  

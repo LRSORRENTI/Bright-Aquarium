@@ -90,26 +90,6 @@ export const Hero = () => {
             ease: 'easeInOut',
           }}
           />
-        {/* <motion.img 
-          src={cylinderImage.src} 
-          alt="cylinder image"
-          width={220} 
-          height={220} 
-          className='hdden md:block -top-8 -left-32 md:absolute'
-          style={{
-            translateY: translateY
-          }}
-          /> */}
-        {/* <motion.img 
-          src={noodleImage.src} 
-          alt='noodle image' 
-          width={220} 
-          className='hidden md:block absolute top-[524px] left-[448px] rotate-[30deg]'
-          style={{
-            rotate: 30,
-            translateY: translateY
-          }}
-          /> */}
       </div>
     </div>
     </div>
