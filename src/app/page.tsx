@@ -1,6 +1,6 @@
 import { Header } from "@/sections/Header";
-import { Top } from '@/sections/Top';
-import { Hero } from '@/sections/Hero';
+import { Top } from "@/sections/Top";
+import { Hero } from  "@/sections/Hero";
 import { LogoTicker } from "@/sections/LogoTicker";
 import { ProductShowcase } from "@/sections/ProductShowcase";
 import { Pricing } from "@/sections/Pricing";

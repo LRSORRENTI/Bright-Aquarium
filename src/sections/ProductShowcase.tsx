@@ -22,7 +22,7 @@ export const ProductShowcase = () => {
       <div className="container">
         <div className='section-heading'>
         <div className='flex justify-center'>
-        <div className='tag'>Discover the ocean's giants</div>
+        <div className='tag'>Discover the ocean&apos;s giants</div>
         </div>
         <h2 className='section-title mt-5'>A breathtaking way to connect with marine life</h2>
         <p className='section-description mt-5'>Step into an underwater world and marvel at majestic whale sharks, vibrant fish, 
